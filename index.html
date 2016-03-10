@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>jQuery Template</title>
-     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-     <script>
-         //js here
-         $(function(){
-             $("h1").fadeOut(2000);
-            $("h1").fadeIn(2000);
-            $("h1").slideDown(1000);
-         });
-     </script>
-  </head>
-  <body>
-  <h1>Goodbye World</h1>
-  </body>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        $(function() {
+            $("#magic").click(function() {
+                    var color1 = $("#colorUser1").val();
+                    var color2 = $("#colorUser2").val();
+                    var name = $("#userName").val();
+                    //$("#banner").css('background-color',color1,color2);
+
+                    //$("#banner").css(background);
+                    $("#banner").css({
+                            background: "-webkit-linear-gradient(left," + color1 + "," + color2 + ")"
+                    
+                    });
+                    var story = name + " here is your Banner!!"
+                $("button").click(function() {
+                    $("p").html(story);
+                });
+
+            });
+
+        });
+    </script>
+    <style type="text/css">
+        #banner {
+            width: 500px;
+            height: 340px;
+            /*background: linear-gradient(to left, red, green);*/
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id=banner>banner</div>
+    first color:
+    <input type="color" id="colorUser1">
+    <br> second color:
+    <input type="color" id="colorUser2">
+    <br> Name:
+    <input id="userName">
+    <h1>Goodbye World</h1>
+    <button id="magic">Create</button>
+    <p></p>
+</body>
+
 </html>
