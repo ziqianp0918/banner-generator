@@ -8,17 +8,17 @@
     <script>
         $(function() {
             $("#magic").click(function() {
-                    var color1 = $("#colorUser1").val();
-                    var color2 = $("#colorUser2").val();
-                    var name = $("#userName").val();
-                    //$("#banner").css('background-color',color1,color2);
+                var color1 = $("#colorUser1").val();
+                var color2 = $("#colorUser2").val();
+                var name = $("#userName").val();
+                //$("#banner").css('background-color',color1,color2);
 
-                    //$("#banner").css(background);
-                    $("#banner").css({
-                            background: "-webkit-linear-gradient(left," + color1 + "," + color2 + ")"
-                    
-                    });
-                    var story = name + " here is your Banner!!"
+                //$("#banner").css(background);
+                $("#banner").css({
+                    background: "-webkit-linear-gradient(left," + color1 + "," + color2 + ")"
+
+                });
+                var story = name + " here is your Banner!!"
                 $("button").click(function() {
                     $("p").html(story);
                 });
@@ -31,7 +31,6 @@
         #banner {
             width: 500px;
             height: 340px;
-            /*background: linear-gradient(to left, red, green);*/
         }
     </style>
 
@@ -45,7 +44,8 @@
     <input type="color" id="colorUser2">
     <br> Name:
     <input id="userName">
-    <h1>Goodbye World</h1>
+    <br>
+    <br>
     <button id="magic">Create</button>
     <p></p>
 </body>
