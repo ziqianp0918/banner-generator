@@ -7,20 +7,18 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>
         $(function() {
-            $("#magic").click(function() {
-                var color1 = $("#colorUser1").val();
+            $("#magic").click(function() {//when the button called magic is clicked
+                var color1 = $("#colorUser1").val();//grab the input and store into a variable called name
                 var color2 = $("#colorUser2").val();
                 var name = $("#userName").val();
-                //$("#banner").css('background-color',color1,color2);
-
-                //$("#banner").css(background);
+                
                 $("#banner").css({
-                    background: "-webkit-linear-gradient(left," + color1 + "," + color2 + ")"
+                    background: "-webkit-linear-gradient(left," + color1 + "," + color2 + ")"//set the banner's background to the 2 color user picked
 
                 });
-                var story = name + " here is your Banner!!"
+                var story = name + " here is your Banner!!"//set username into a sentence.
                 $("button").click(function() {
-                    $("p").html(story);
+                    $("p").html(story);//set the p tag as the variable story
                 });
 
             });
